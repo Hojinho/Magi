@@ -1,14 +1,14 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Hand : MonoBehaviour
 {
-    private GameObject bullet = null;
+    public GameObject bullet;
 
     private void Awake()
     {
-        bullet = Resources.Load<GameObject>("Prefabs/Bullet");
     }
 
     void Start()
@@ -22,6 +22,6 @@ public class Hand : MonoBehaviour
 
     public void Shoot()
     {
-        Instantiate(bullet, transform.position, Quaternion.identity);
+        GameObject ins = Instantiate(bullet, transform.position, Quaternion.identity);
     }
 }

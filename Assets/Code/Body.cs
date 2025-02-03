@@ -27,7 +27,7 @@ public class Body : MonoBehaviour
     private ActionState currentActionState = ActionState.None;
     private Hand hand = null;
     
-    private float speed = 3f;
+    private float speed = 5f;
 
 
     private void Awake()
